@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+</head>
+<body>
+	<div class="mainContainer">
+		<div class="heading">
+		<h3 class="title portfolio-title">Portfolio
+			<div class="borderBottom"></div>
+		</h3>
+		<input type="checkbox" name="menuInput" id="menuInput">
+		<label class="menuContainer" for="menuInput">
+		<div class="menuIcon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</label>
+	<div class="menuItems">
+		<ul>
+			<li><a href="https://vitoahmeny.github.io/portfolio-responsive/">Home</a></li>
+			<li><a href="https://vitoahmeny.github.io/portfolio-responsive/">Portfolio</a></li>
+			<li><a href="https://vitoahmeny.github.io/portfolio-responsive/">Profile & Contact</a></li>
+			<li><a href="https://vitoahmeny.github.io/portfolio-responsive/">Skills</a></li>
+			<li><a href="https://vitoahmeny.github.io/portfolio-responsive/">Search</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="projectsContainer">
+		<div class="tabComponents container">
+			<label for="real-calculator">Real Calculator</label>			
+			<label for="search-form">Search Form</label>
+			<label for="simple-gallery">Simple Gallery</label>
+			<label for="nonJsUiComponent">Business Card</label>
+			<label for="project-team-collaboration">Team Collaboration</label>
+			<label for="old-portfolio">Old Portfolio Site</label>
+		</div>
+
+		<input type="radio" class="carousel-start" name="carousel-start" id="real-calculator" checked="" >
+		<div class="carousel-inner">
+				<input type="radio"  class="carousel-open" name="carousel" id="calculator-1" aria-hidden="true" hidden="" checked="">
+				<div class="carousel-item project-calculator">
+					<form>
+					<textarea disabled 	rows="2" maxlength="10" class="view"></textarea>
+					<div class="row1">
+						<button class='ac'>AC</button>
+						<button class="percent">%</button>
+						<button class="sign" id="division">/</button>	
+						<button class='del'>DEL</button></div>
+					<div class="row2">
+						<button class="number">7</button>
+						<button class="number">8</button>
+						<button class="number">9</button>
+						<button class="sign" id="multiply">*</button>
+						</div>
+					<div calss="row3">
+						<button class="number" id="4">4</button>
+						<button class="number" id="5">5</button>
+						<button class="number" id="6">6</button>
+						<button class="sign" id="minus">-</button></div>
+					<div class="row4">
+						<button class="number" id="1">1</button>
+						<button class="number" id="2">2</button>
+						<button class="number" id="3">3</button>
+						<button class="sign" id="plus">+</button></div>
+					<div class="row5">
+						<button class="number" id="0">0</button>
+						<button class="dot" >.</button>
+						<button id="negative">&#177</button>
+						<button class="evaluate">=</button></div>
+					
+				</form>
+			</div>
+
+				<input type="radio"  class="carousel-open" name="carousel" id="calculator-2" aria-hidden="true" hidden="" >
+
+				<div class="carousel-item">
+
+
+				<p>The calculaor is inspired by the calculator app design on LG G3. It's a rather minimalistic design.</p>
+				<p>The buttons of the calculator are registered with clicking event and respective keypress events.</p>
+				<p>The calculation is done with the `eval` function.</p>
+				<p>Placeholder for a gradient based calculator design.</p>
+				</div>
+
+				<input type="radio"  class="carousel-open" name="carousel" id="calculator-3" aria-hidden="true" hidden="">
+
+				<div class="carousel-item">
+				<h2>The Takeways</h2>
+				<ul>
+					<li>Use <code>border-radius</code> to make a circle.</li>
+					<li>The <code>eval</code> method.</li>
+					<li><code>keydown</code> and <code>click</code> event types.</li>
+					<li>Use <code>Node.innerHTML</code> to modify the content of an existing DOM element.</li>
+				</ul>
+				</div>
+
+				<input type="radio"  class="carousel-open" name="carousel" id="calculator-4" aria-hidden="true" hidden="">
+
+				<div class="carousel-item">
+					<ul>
+						<li>Add title bar for the calculator app, the title bar will be consisted of icons that add functionalities including close, minimize and restore.</li>
+						<li>Add a gradient-based design of the calculator.</li>
+					</ul>
+				</div>
+
+				<label for="calculator-4" class="carouselControl prev control-1"><</label>
+				<label for="calculator-2" class="carouselControl next control-1">></label>
+				<label for="calculator-1" class="carouselControl prev control-2"><</label>
+				<label for="calculator-3" class="carouselControl next control-2">></label>
+				<label for="calculator-2" class="carouselControl prev control-3"><</label>
+				<label for="calculator-4" class="carouselControl next control-3">></label>
+				<label for="calculator-3" class="carouselControl prev control-4"><</label>
+				<label for="calculator-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets calculator-bullet">
+					<ul>
+						<li><label for="calculator-1">&#x25cf;</label></li>
+						<li><label for="calculator-2">&#x25cf;</label></li>
+						<li><label for="calculator-3">&#x25cf;</label></li>
+						<li><label for="calculator-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+		</div>
+
+		<input type="radio" class="carousel-start" name="carousel-start" id="search-form">
+
+			<div class="search carousel-inner">
+				<input type="radio"  class="carousel-open-search-form" name="carousel-search-form" id="search-form-1" aria-hidden="true" hidden="" checked="">
+				<div class="carousel-item-search-form">
+					<form>
+						<h3>Bookland</h3>
+						<input type="text"></input>
+						<select name="list-of-books" id="list-of-books">
+							<option value="Comedy">Comedy</option>
+							<option value="Drama">Drama</option>
+							<option value="Non-fiction">Non-fiction</option>
+							<option value="Realistic-fiction">Realistic-fiction</option>
+							<option value="Romantic noval">Romantic novel</option>
+							<option value="Satire">Satire</option>
+						</select>
+						<button class="search-button">Search</button>
+					</form>
+				</div>
+
+				<input type="radio"  class="carousel-open-search-form" name="carousel-search-form" id="search-form-2" aria-hidden="true" hidden="" >
+
+				<div class="carousel-item-search-form">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+				</div>
+
+				<input type="radio"  class="carousel-open-search-form" name="carousel-search-form" id="search-form-3" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-search-form">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+				</div>
+
+				<input type="radio"  class="carousel-open-search-form" name="carousel-search-form" id="search-form-4" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-search-form">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+
+				<label for="search-form-4" class="carouselControl prev control-1"><</label>
+				<label for="search-form-2" class="carouselControl next control-1">></label>
+				<label for="search-form-1" class="carouselControl prev control-2"><</label>
+				<label for="search-form-3" class="carouselControl next control-2">></label>
+				<label for="search-form-2" class="carouselControl prev control-3"><</label>
+				<label for="search-form-4" class="carouselControl next control-3">></label>
+				<label for="search-form-3" class="carouselControl prev control-4"><</label>
+				<label for="search-form-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets search-form-bullet">
+					<ul>
+						<li><label for="search-form-1">&#x25cf;</label></li>
+						<li><label for="search-form-2">&#x25cf;</label></li>
+						<li><label for="search-form-3">&#x25cf;</label></li>
+						<li><label for="search-form-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+			</div>
+
+			<input type="radio" class="carousel-start" name="carousel-start" id="simple-gallery" hidden="">
+
+			<div class="car-gallery carousel-inner">
+				<input type="radio"  class="carousel-open-simple-gallery" name="carousel-simple-gallery" id="simple-gallery-1" aria-hidden="true" hidden="" checked="">
+				<div class="carousel-item-simple-gallery">
+					<div class="gallery-container">
+  
+  					<input id="1" name="image" checked type="radio" />
+  					<label for="1">
+    					<img class="small" src="./img/pexels-photo.jpg"/>
+  					</label>
+					
+  					<input id="2" name="image" type="radio" />
+  					<label for="2">
+    					<img class="small" src="./img/lights-clouds-dark-car.jpg"/>
+  					</label>
+					  
+  					<input id="3" name="image" type="radio" />
+  					<label for="3">
+  					<img class="small" src="./img/pexels-photo.jpg"/></label>
+					
+  					<input id="4" name="image" type="radio" />
+  					<label for="4">
+  					<img class="small" src="./img/lights-clouds-dark-car.jpg"/>
+  					</label>
+					
+    					<input id="5" name="image" type="radio" />
+  					<label for="5">
+  					<img class="small" src="./img/pexels-photo.jpg"/>
+  					</label>
+					  
+  					<!-- Thumbnail placeholder for 5th image -->
+					
+  					<div class="placeholder">
+    					<img class="large" src="./img/pexels-photo.jpg" />
+  					</div>
+					  
+  					<div class="placeholder">
+    					<img class="large" src="./img/lights-clouds-dark-car.jpg" />
+  					</div>
+					  
+  					<div class="placeholder">
+    					<img class="large" src="./img/pexels-photo.jpg" />
+  					</div>
+					  
+  					<div class="placeholder">
+    					<img class="large" src="./img/lights-clouds-dark-car.jpg" />
+  					</div>
+    					<div class="placeholder">
+    					<img class="large" src="./img/pexels-photo.jpg" />
+  					</div>
+  
+					</div>
+				</div>
+				<input type="radio"  class="carousel-open-simple-gallery" name="carousel-simple-gallery" id="simple-gallery-2" aria-hidden="true" hidden="" >
+				<div class="carousel-item-simple-gallery">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+				<input type="radio"  class="carousel-open-simple-gallery" name="carousel-simple-gallery" id="simple-gallery-3" aria-hidden="true" hidden="">
+				<div class="carousel-item-simple-gallery">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+				<input type="radio"  class="carousel-open-simple-gallery" name="carousel-simple-gallery" id="simple-gallery-4" aria-hidden="true" hidden="">
+				<div class="carousel-item-simple-gallery">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+
+				<label for="simple-gallery-4" class="carouselControl prev control-1"><</label>
+				<label for="simple-gallery-2" class="carouselControl next control-1">></label>
+				<label for="simple-gallery-1" class="carouselControl prev control-2"><</label>
+				<label for="simple-gallery-3" class="carouselControl next control-2">></label>
+				<label for="simple-gallery-2" class="carouselControl prev control-3"><</label>
+				<label for="simple-gallery-4" class="carouselControl next control-3">></label>
+				<label for="simple-gallery-3" class="carouselControl prev control-4"><</label>
+				<label for="simple-gallery-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets simple-gallery-bullet">
+					<ul>
+						<li><label for="simple-gallery-1">&#x25cf;</label></li>
+						<li><label for="simple-gallery-2">&#x25cf;</label></li>
+						<li><label for="simple-gallery-3">&#x25cf;</label></li>
+						<li><label for="simple-gallery-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+			</div>
+
+			<input type="radio" class="carousel-start" name="carousel-start" id="nonJsUiComponent" hidden="">
+			<div class="non-js carousel-inner">
+				<input type="radio"  class="carousel-open-non-js" name="carousel-non-js" id="non-js-1" aria-hidden="true" hidden="" checked="">
+				<div class="business-card carousel-item-non-js">
+
+				<label >
+    				<input type="checkbox"  />
+				
+    				<div class="card">
+      					<div class="front">
+				
+					<section class="heading">		
+						<p>Vito Fan</p>
+						<small>Stay Home Dad</small>
+					</section>		
+					<div class="description">
+		<p>Hi, I am a frontend Web Developer who's passionate about learning and discovering the wonderful world of programming. I'am always ready to build awesome things with you.</p>
+						<p>Vito is currently self-employed.</p>
+					</div>
+					<div class="web">
+						<a href="#">vitogalaxy@hotmail.com</a>
+						<a href="#">vitogalaxy.com</a>
+					</div>
+					<section class="footer">
+						<img src="img/enc1.png">
+						<div class="footerText">
+							<p>Vito Fan</p>
+							<p>on <a href="#">Encyclopedia.MD</a></p>
+						</div>
+						<div class="icons">
+						<img src="img/twitter.png">
+						<img src="img/facebook.png">
+						<img src="img/github1.png">
+						<img src="img/linkedin.png">
+						</div>
+					</section>
+      				</div>
+      				<div class="back">
+        				<p>
+          				Hobbies/Interests/Skills
+        				</p>
+        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      				</div>
+    				</div>
+					</label>
+				</div>
+
+				<input type="radio"  class="carousel-open-non-js" name="carousel-non-js" id="non-js-2" aria-hidden="true" hidden="" >
+				<div class="carousel-item-non-js">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+				<input type="radio"  class="carousel-open-non-js" name="carousel-non-js" id="non-js-3" aria-hidden="true" hidden="">
+				<div class="carousel-item-non-js">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+				<input type="radio"  class="carousel-open-non-js" name="carousel-non-js" id="non-js-4" aria-hidden="true" hidden="">
+				<div class="carousel-item-non-js">
+					<div class="item-wrapper">
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				</div>
+
+				<label for="non-js-4" class="carouselControl prev control-1"><</label>
+				<label for="non-js-2" class="carouselControl next control-1">></label>
+				<label for="non-js-1" class="carouselControl prev control-2"><</label>
+				<label for="non-js-3" class="carouselControl next control-2">></label>
+				<label for="non-js-2" class="carouselControl prev control-3"><</label>
+				<label for="non-js-4" class="carouselControl next control-3">></label>
+				<label for="non-js-3" class="carouselControl prev control-4"><</label>
+				<label for="non-js-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets non-js-bullet">
+					<ul>
+						<li><label for="non-js-1">&#x25cf;</label></li>
+						<li><label for="non-js-2">&#x25cf;</label></li>
+						<li><label for="non-js-3">&#x25cf;</label></li>
+						<li><label for="non-js-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+			</div>
+
+			<input type="radio" class="carousel-start" name="carousel-start" id="project-team-collaboration">
+			<div class="project-team-collaboration carousel-inner">
+				<input type="radio"  class="carousel-open-project-team-collaboration" name="carousel-project-team-collaboration" id="project-team-collaboration-1" aria-hidden="true" hidden="" checked="">
+				<div class="carousel-item-project-team-collaboration">
+					<img src="img/chat-app.png" alt="team-collaboration-app">
+				</div>
+
+				<input type="radio"  class="carousel-open-project-team-collaboration" name="carousel-project-team-collaboration" id="project-team-collaboration-2" aria-hidden="true" hidden="" >
+
+				<div class="carousel-item-project-team-collaboration">
+
+					<p>placeholder for altered design.</p>
+				</div>
+
+				<input type="radio"  class="carousel-open-project-team-collaboration" name="carousel-project-team-collaboration" id="project-team-collaboration-3" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-project-team-collaboration">
+
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				<input type="radio"  class="carousel-open-project-team-collaboration" name="carousel-project-team-collaboration" id="project-team-collaboration-4" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-project-team-collaboration">
+
+					<p>placeholder for altered design.</p>
+
+				</div>
+
+				<label for="project-team-collaboration-4" class="carouselControl prev control-1"><</label>
+				<label for="project-team-collaboration-2" class="carouselControl next control-1">></label>
+				<label for="project-team-collaboration-1" class="carouselControl prev control-2"><</label>
+				<label for="project-team-collaboration-3" class="carouselControl next control-2">></label>
+				<label for="project-team-collaboration-2" class="carouselControl prev control-3"><</label>
+				<label for="project-team-collaboration-4" class="carouselControl next control-3">></label>
+				<label for="project-team-collaboration-3" class="carouselControl prev control-4"><</label>
+				<label for="project-team-collaboration-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets project-team-collaboration-bullet">
+					<ul>
+						<li><label for="project-team-collaboration-1">&#x25cf;</label></li>
+						<li><label for="project-team-collaboration-2">&#x25cf;</label></li>
+						<li><label for="project-team-collaboration-3">&#x25cf;</label></li>
+						<li><label for="project-team-collaboration-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+			</div>
+
+			<input type="radio" class="carousel-start" name="carousel-start" id="old-portfolio">
+			<div class="old-portfolio carousel-inner">
+				<input type="radio"  class="carousel-open-old-portfolio" name="carousel-old-portfolio" id="old-portfolio-1" aria-hidden="true" hidden="" checked="">
+				<div class="carousel-item-old-portfolio">
+					<img src="img/portfolio.png" alt="team-collaboration-app">
+				</div>
+
+				<input type="radio"  class="carousel-open-old-portfolio" name="carousel-old-portfolio" id="old-portfolio-2" aria-hidden="true" hidden="" >
+
+				<div class="carousel-item-old-portfolio">
+
+					<p>placeholder for altered design.</p>
+				</div>
+
+				<input type="radio"  class="carousel-open-old-portfolio" name="carousel-old-portfolio" id="old-portfolio-3" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-old-portfolio">
+
+					<p>placeholder for altered design.</p>
+					</div>				
+
+				<input type="radio"  class="carousel-open-old-portfolio" name="carousel-old-portfolio" id="old-portfolio-4" aria-hidden="true" hidden="">
+
+				<div class="carousel-item-old-portfolio">
+
+					<p>placeholder for altered design.</p>
+
+				</div>
+
+				<label for="old-portfolio-4" class="carouselControl prev control-1"><</label>
+				<label for="old-portfolio-2" class="carouselControl next control-1">></label>
+				<label for="old-portfolio-1" class="carouselControl prev control-2"><</label>
+				<label for="old-portfolio-3" class="carouselControl next control-2">></label>
+				<label for="old-portfolio-2" class="carouselControl prev control-3"><</label>
+				<label for="old-portfolio-4" class="carouselControl next control-3">></label>
+				<label for="old-portfolio-3" class="carouselControl prev control-4"><</label>
+				<label for="old-portfolio-1" class="carouselControl next control-4">></label>
+
+				<div class="bullets old-portfolio-bullet">
+					<ul>
+						<li><label for="old-portfolio-1">&#x25cf;</label></li>
+						<li><label for="old-portfolio-2">&#x25cf;</label></li>
+						<li><label for="old-portfolio-3">&#x25cf;</label></li>
+						<li><label for="old-portfolio-4">&#x25cf;</label></li>			
+					</ul>
+				</div>
+
+			</div>
+
+
+
+		
+	</div>
+</div>
+</body>
+</html>
