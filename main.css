@@ -22,6 +22,10 @@ h1 {
 
 }
 
+.heading h3 {
+	margin-top: 65px;
+}
+
 .menuContainer {
 	position: fixed;
 	top: 80px;
@@ -58,9 +62,9 @@ h1 {
 }
 
 .menuIcon span:nth-child(3) {
-	width: 70%;
+	width: 80%;
 	bottom: 0px;
-	margin-left: 30%;
+	margin-left: 20%;
 }
 
 .menuIcon:hover > span:nth-child(3) {
@@ -101,7 +105,6 @@ h1 {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-
 	transition: opacity .25s;
 }
 
@@ -116,12 +119,26 @@ h1 {
 	justify-content: space-around;
 	padding: 0;
 	margin: 0;
+	transition-timing-function: ease-in-out;
+	transition: color .25s, text-shadow .25s;
+}
+
+.menuItems ul:hover {
+	color: transparent;
+  	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.menuItems ul li:hover {
+	color: #808080;
+	text-shadow: none;
+	transition: color .25s, text-shadow .25s;
+
 }
 
 .menuItems a {
 	text-decoration: none;
 	color: inherit;
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 #menuInput:checked ~ div.menuItems {
@@ -130,6 +147,592 @@ h1 {
 	z-index: 2;
 }
 
+
+.projectsContainer {
+	position: relative;
+
+}
+
+.projectsContainer .tabComponents {
+	margin-top: 50px;
+	transition-timing-function: ease-in-out;
+	transition: color .25s, text-shadow.25s;
+}
+
+.tabComponents:hover {
+	color: transparent;
+  	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.tabComponents label:hover {
+	color: #808080;
+	text-shadow: none;
+	transition: color .25s, text-shadow .25s;
+}
+
+.carousel-start {
+	display: none;
+}
+
+.carousel-inner {
+	position: absolute;
+	width: 100%;
+	display: none;
+}
+
+.carousel-start:nth-of-type(1):checked + .carousel-inner,
+.carousel-start:nth-of-type(2):checked + .carousel-inner,
+.carousel-start:nth-of-type(3):checked + .carousel-inner,
+.carousel-start:nth-of-type(4):checked + .carousel-inner,
+.carousel-start:nth-of-type(5):checked + .carousel-inner,
+.carousel-start:nth-of-type(6):checked + .carousel-inner
+{
+	display: block;
+}
+
+.carousel-start:nth-of-type(1):checked ~ .tabComponents label:nth-of-type(1),
+.carousel-start:nth-of-type(2):checked ~ .tabComponents label:nth-of-type(2),
+.carousel-start:nth-of-type(3):checked ~ .tabComponents label:nth-of-type(3),
+.carousel-start:nth-of-type(4):checked ~ .tabComponents label:nth-of-type(4),
+.carousel-start:nth-of-type(5):checked ~ .tabComponents label:nth-of-type(5),
+.carousel-start:nth-of-type(6):checked ~ .tabComponents label:nth-of-type(6)
+{
+	color: blue;
+	background: blue;
+}
+
+
+
+.carousel-item, .carousel-item-search-form, .carousel-item-simple-gallery,
+.carousel-item-non-js, .carousel-item-project-team-collaboration, .carousel-item-old-portfolio {
+	position: absolute;
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+	opacity: 0;
+	visibility: hidden;
+	width: 90%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.carousel-open:checked + .carousel-item, 
+.carousel-open-search-form:checked + .carousel-item-search-form,
+.carousel-open-simple-gallery:checked + .carousel-item-simple-gallery,
+.carousel-open-non-js:checked + .carousel-item-non-js,
+.carousel-open-project-team-collaboration:checked + .carousel-item-project-team-collaboration,
+.carousel-open-old-portfolio:checked + .carousel-item-old-portfolio
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+.project-calculator form {
+	width: 320px;
+	margin:auto;
+	margin-top: 7%;
+	box-shadow: 1px 1px 5px #666666;
+	padding: 10px 0 25px 18px;
+	background: white;
+	border: none;
+}
+
+.project-calculator textarea {
+	width: 92%;
+	margin-left: 5px;
+	border: none;
+	font-size: 50px;
+	outline: none;
+}
+
+
+.project-calculator button {
+	width: 60px;
+	border-radius: 50%;
+	height: 60px;
+	background-color: white;
+	border: 1px solid #D3D3D3;
+	margin: 0 0 10px 10px;
+	font-size: 28px;
+	font-weight: 100;
+	text-align: center;
+	opacity: 1;
+	vertical-align: middle;
+}
+
+.project-calculator button:hover {
+	opacity: 0.5;
+}
+
+.project-calculator button.number:hover {
+	color: #e5e5e5;
+	opacity: 0.7;
+}
+
+.project-calculator .sign {
+	background-color: #e5e5e5;
+	color: #808080;
+	font-size: 2em;
+	font-weight: 600;
+
+}
+
+.project-calculator #plus {
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+
+.project-calculator #minus {
+	font-size: 50px;
+	font-weight: 300;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.project-calculator #multiply {
+	padding-top: 15px;
+	padding-left: 10px;
+}
+
+.project-calculator #division {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	font-size: 1.5em;
+}
+
+.project-calculator #negative {
+	background-color: #e5e5e5;
+	color: #808080;
+	font-size: 2em;
+	font-weight: 600;
+}
+.project-calculator .del  {
+	color: white;
+	background-color: #ffb2b2;
+	font-weight: 600;
+	font-size: 1.2em;
+	padding-left: 10px;
+
+}
+
+.project-calculator .ac {
+	background-color: orange;
+	color: white;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+.project-calculator .evaluate {
+	color: white;
+	background-color: gray;
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.project-calculator .dot {
+	font-weight: 900;
+	padding-left: 10px;
+}
+
+.carousel-item-search-form {
+
+}
+
+.search form {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 80%;
+	background: url(img/lost-places-1643564_1920.jpg) center center;
+
+}
+
+.search h3 {
+	color: #7ECDD2;
+	font-size: 7vw;
+	text-align: center;
+	margin-top: 50px;
+}
+.search input[type="text"] {
+	border: 1px solid #7ECDD2;
+	display: block;
+	width: 80%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 40px;
+	margin: auto;
+}
+
+.search select {
+	width: 100px;
+	margin-left: 10%;
+	border: 1px solid #7ECDD2;
+}
+
+.search button {
+	display: block;
+	margin: 5% auto;
+	line-height: 50px;
+  	font-size: 2em;
+  	background-color: #7ECDD2;
+  	color: white;
+  	width: 30%;
+  	text-decoration: none;
+  	text-align: center;
+  	border: none;
+  	box-shadow: 2px 2px 5px black;
+  	opacity: 1;
+  	margin-bottom: 200px;
+}
+
+.search button:hover {
+	opacity: 0.7;
+}
+
+.car-gallery div.gallery-container input{
+
+  display:none;
+  
+}
+
+.car-gallery div.gallery-container img.small{
+  
+  background:black;
+  cursor:pointer;
+  float:left;
+  margin: 0;
+  position: relative;
+  transition: box-shadow 0.5s;
+  z-index:2;
+  padding: 5px;
+}
+
+.car-gallery div.gallery-container img.small:hover {
+  box-shadow: 1px 1px 20px black;
+}
+
+.car-gallery div.gallery-container img.large{
+  
+  display: block;
+  opacity:0;
+  position:absolute;
+  top:0;
+  transition: opacity 0.5s;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+
+}
+
+.car-gallery div.gallery-container input:nth-of-type(1):checked ~ .placeholder:nth-of-type(1) .large,
+.car-gallery div.gallery-container input:nth-of-type(2):checked ~ .placeholder:nth-of-type(2) .large,
+.car-gallery div.gallery-container input:nth-of-type(3):checked ~ .placeholder:nth-of-type(3) .large,
+.car-gallery div.gallery-container input:nth-of-type(4):checked ~ .placeholder:nth-of-type(4) .large,
+.car-gallery div.gallery-container input:nth-of-type(5):checked ~ .placeholder:nth-of-type(5) .large {
+  opacity:1;
+  z-index: 1;
+}
+
+.car-gallery .small{
+  width:120px;
+}
+
+.business-card {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+.business-card label {
+  
+  cursor: pointer;
+  display: block;
+  height: 375px;
+  width: 630px;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+
+  position: absolute;
+
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+}
+
+.business-card .card {
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+
+  width: 100%;
+  z-index: 1;  
+}
+
+.business-card .card > div {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+
+  -- Vendor prefix for backface-visibility --
+  border-radius: 5px;
+  height: 100%;
+  position: absolute;
+  width: 630px;
+  background: url(img/bg1.png);
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.business-card .card .back {
+  background: gray;
+  color: white;
+  transform: rotateX(180deg);
+  -- Vendor prefixes --
+  -webkit-transform: rotateX(180deg);
+  
+}
+
+.business-card label:hover .card {
+  
+  transform: rotateX(15deg);
+  -- Vendor prefixes --
+  -webkit-transform: rotateX(15deg);  
+  box-shadow: 1px 1px 5px gray;
+}
+
+.business-card input {
+  
+  display: none;
+  
+}
+
+.business-card input:checked + .card {
+  
+  transform: rotateX(180deg);
+  -webkit-transform:rotateX(180deg);
+  -- Vendor prefixes --
+  
+}
+
+.business-card label:hover input:checked + .card {
+  
+  box-shadow: 1px 1px 5px black;
+  transform: rotateX(165deg);
+  -webkit-backface-visibility: hidden;
+  -- Vendor prefixes --
+  
+}
+
+.business-card .card .heading p {
+  font-weight: 100;
+  font-size: 3em;
+  margin-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.business-card .heading small {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+.business-card .description {
+  margin-right: 40px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.business-card .web a {
+ display: inline-block;
+  margin-right: 50px;
+  text-decoration: none;
+  color: #cd00cd;
+  margin-bottom: 30px;
+}
+
+.business-card .footer {
+}
+
+.business-card .footer img {
+	margin-right: 15px;
+}
+
+.business-card .footer > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.business-card .footer .footerText a {
+  color: #cd00cd;
+  text-decoration: none;
+}
+.business-card .footer .footerText p {
+  line-height: 0.5;
+}
+
+.business-card .footer .icons {
+  margin-left: 165px;
+}
+
+.project-team-collaboration img {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.old-portfolio img {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+
+.carouselControl {
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	text-align: center;
+	width: 40px;
+    cursor: pointer;
+	z-index: 9999;
+	position: absolute;
+	top: 250px;
+	display: none;
+	transition: background 1s, opacity 1s;
+}
+
+.carouselControl:hover {
+	opacity: 0.7;
+}
+
+.prev{
+	left: 5%;
+}
+
+.next {
+	right: 5%;
+}
+
+#calculator-1:checked ~ .control-1,
+#calculator-2:checked ~ .control-2,
+#calculator-3:checked ~ .control-3,
+#calculator-4:checked ~ .control-4
+
+{
+    display: block;
+}
+
+#search-form-1:checked ~ .control-1,
+#search-form-2:checked ~ .control-2,
+#search-form-3:checked ~ .control-3,
+#search-form-4:checked ~ .control-4
+{
+    display: block;
+}
+
+#simple-gallery-1:checked ~ .control-1,
+#simple-gallery-2:checked ~ .control-2,
+#simple-gallery-3:checked ~ .control-3,
+#simple-gallery-4:checked ~ .control-4
+{
+    display: block;
+}
+
+#non-js-1:checked ~ .control-1,
+#non-js-2:checked ~ .control-2,
+#non-js-3:checked ~ .control-3,
+#non-js-4:checked ~ .control-4
+
+{
+    display: block;
+}
+
+#project-team-collaboration-1:checked ~ .control-1,
+#project-team-collaboration-2:checked ~ .control-2,
+#project-team-collaboration-3:checked ~ .control-3,
+#project-team-collaboration-4:checked ~ .control-4
+
+{
+    display: block;
+}
+
+#old-portfolio-1:checked ~ .control-1,
+#old-portfolio-2:checked ~ .control-2,
+#old-portfolio-3:checked ~ .control-3,
+#old-portfolio-4:checked ~ .control-4
+
+{
+    display: block;
+}
+
+.bullets {
+	position: absolute;
+	top: 600px;
+	left: 50%;
+	transform: translateX(-70%);
+
+}
+
+.bullets ul {
+	list-style: none;
+}
+
+.bullets ul li {
+	font-size: 1.5em;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+.bullets ul li label:hover {
+	cursor: pointer;
+}
+
+.carousel-open:nth-of-type(1):checked ~ .calculator-bullet ul li:nth-of-type(1),
+.carousel-open:nth-of-type(2):checked ~ .calculator-bullet ul li:nth-of-type(2),
+.carousel-open:nth-of-type(3):checked ~ .calculator-bullet ul li:nth-of-type(3),
+.carousel-open:nth-of-type(4):checked ~ .calculator-bullet ul li:nth-of-type(4),
+.search .carousel-open-search-form:nth-of-type(1):checked ~ .search-form-bullet ul li:nth-of-type(1),
+.search .carousel-open-search-form:nth-of-type(2):checked ~ .search-form-bullet ul li:nth-of-type(2),
+.search .carousel-open-search-form:nth-of-type(3):checked ~ .search-form-bullet ul li:nth-of-type(3),
+.search .carousel-open-search-form:nth-of-type(4):checked ~ .search-form-bullet ul li:nth-of-type(4)
+.car-gallery .carousel-open-simple-gallery:nth-of-type(1):checked ~ .simple-gallery-bullet ul li:nth-of-type(1),
+.car-gallery .carousel-open-simple-gallery:nth-of-type(2):checked ~ .simple-gallery-bullet ul li:nth-of-type(2),
+.car-gallery .carousel-open-simple-gallery:nth-of-type(3):checked ~ .simple-gallery-bullet ul li:nth-of-type(3),
+.car-gallery .carousel-open-simple-gallery:nth-of-type(4):checked ~ .simple-gallery-bullet ul li:nth-of-type(4),
+.non-js .carousel-open-non-js:nth-of-type(1):checked ~ .non-js-bullet ul li:nth-of-type(1),
+.non-js .carousel-open-non-js:nth-of-type(2):checked ~ .non-js-bullet ul li:nth-of-type(2),
+.non-js .carousel-open-non-js:nth-of-type(3):checked ~ .non-js-bullet ul li:nth-of-type(3),
+.non-js .carousel-open-non-js:nth-of-type(4):checked ~ .non-js-bullet ul li:nth-of-type(4),
+.project-team-collaboration .carousel-open-project-team-collaboration:nth-of-type(1):checked ~ .project-team-collaboration-bullet ul li:nth-of-type(1),
+.project-team-collaboration .carousel-open-project-team-collaboration:nth-of-type(2):checked ~ .project-team-collaboration-bullet ul li:nth-of-type(2),
+.project-team-collaboration .carousel-open-project-team-collaboration:nth-of-type(3):checked ~ .project-team-collaboration-bullet ul li:nth-of-type(3),
+.project-team-collaboration .carousel-open-project-team-collaboration:nth-of-type(4):checked ~ .project-team-collaboration-bullet ul li:nth-of-type(4),
+.old-portfolio .carousel-open-old-portfolio:nth-of-type(1):checked ~ .old-portfolio-bullet ul li:nth-of-type(1),
+.old-portfolio .carousel-open-old-portfolio:nth-of-type(2):checked ~ .old-portfolio-bullet ul li:nth-of-type(2),
+.old-portfolio .carousel-open-old-portfolio:nth-of-type(3):checked ~ .old-portfolio-bullet ul li:nth-of-type(3),
+.old-portfolio .carousel-open-old-portfolio:nth-of-type(4):checked ~ .old-portfolio-bullet ul li:nth-of-type(4)
+
+
+{
+	opacity: 1;
+}
 
 .container {
 	display: flex;
@@ -165,10 +768,6 @@ h1 {
 .contactRowOne {
 	display: flex;
 	justify-content: space-between;
-}
-
-.twitter {
-
 }
 
 .contactTable {
@@ -230,7 +829,7 @@ h1 {
 .portfolio {
 	background: url(img/portfolio.png) center top;
 }
-.search {
+.search-background {
 	background: url(img/search.png) center center;
 }
 
@@ -272,13 +871,19 @@ h1 {
 	font-size: 1em;
 }
 
-@media screen and (min-width: 1400px) {
+
+
+@media screen and (min-width: 1500px) {
 	.mainContainer {
 		width: 62%;
 	}
 
 	.menuContainer {
 		right: 19.5%;
+	}
+
+	.menuItems ul {
+		width: 50%;
 	}
 }
 
@@ -323,6 +928,16 @@ and (min-width: 320px) {
 	.menuContainer {
 		top: 50px;
 	}
+
+	.menuIcon {
+		width: 33px;
+		height: 16px;
+
+	}
+
+	.menuIcon span:nth-child(2) {
+		top: 8px;
+	}
 	
 	#menuInput:checked ~ div.menuItems ul {
 		flex-direction: column;
@@ -334,6 +949,90 @@ and (min-width: 320px) {
 		width: 100%;
 		text-align: center;
 	}
+
+	.tabComponents {
+		padding: 0;
+		height: 300px;
+		font-size: 1.2em;
+		flex-direction: column;
+		text-align: center;
+	}
+
+
+	.tabComponents label {
+
+	}
+
+	.carousel-item, .carousel-item-search-form, .carousel-item-simple-gallery,
+.carousel-item-non-js, .carousel-item-project-team-collaboration, .carousel-item-old-portfolio {
+}
+
+	.project-calculator {
+		width: 100%;
+	}
+
+	.search form {
+		background: none;
+		width: 100%;
+	}
+
+	.search h3 {
+		font-size: 3em;
+	}
+
+	.search input[type="text"] {
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		font-size: 1em;
+
+	}
+
+	.search button {
+
+		font-size: 1.5em;
+		margin-top: 5%;
+	}
+
+	.search select {
+		margin-top: 5%;
+		margin-left: 0;
+	}
+
+	.car-gallery .small {
+		width: 50px;
+	}
+
+	.business-card label {
+		width: 95%;
+	}
+	.business-card .card > div {
+		width: 100%;
+	}
+	.business-card .card .heading p, .card .heading small {
+  	font-weight: 100;
+  	font-size: 1em;
+  	margin-top: 0;
+  	padding-top: 0;
+  	padding-bottom: 0;
+  	margin-bottom: 0;
+}
+	.business-card .description {
+ 		margin-right: 10px;
+ 		margin-top: 10px;
+ 		margin-bottom: 5px;
+}
+	.business-card .web a {
+  display: inline-block;
+  text-decoration: none;
+  color: #cd00cd;
+  margin-bottom: 10px;
+}
+.business-card .footer .icons {
+	margin-top: 10px;
+  margin-left: 0px;
+  padding-bottom: 5%;
+}
 
 	.contact, .twoRoad {
 		display: none;
@@ -352,4 +1051,63 @@ and (min-width: 320px) {
 		height: 250px;
 		background-size: cover;
 	}
+
+	.search-background {
+		background-size: contain;
+	}
+
+	.project-team-collaboration img, .old-portfolio img {
+		width: 100%;
+	}
+}
+
+@media screen 
+and (max-width: 320px) {
+	.project-calculator form {
+		width: 255px;
+	}
+
+	.project-calculator button {
+		width: 45px;
+		height: 45px;
+		font-size: 20px;
+	}
+
+
+.project-calculator #multiply, .ac, #minus, #plus, .sign,
+#division, #negative, .del, .ac {
+	font-size: 1em;
+}
+
+.project-calculator #plus {
+	padding-right: 10px;
+}
+
+.project-calculator #minus {
+	font-size: 2em;
+	padding-bottom: 10px;
+	padding-left: 8px;
+}
+
+.project-calculator #multiply {
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.project-calculator #division {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	font-size: 1.5em;
+}
+
+.project-calculator #negative {
+	background-color: #e5e5e5;
+}
+.project-calculator .del  {
+	padding-left: 5px;
+}
+
+.business-card .footer img {
+	margin-right: 5px;
+}
 }
