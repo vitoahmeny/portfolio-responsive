@@ -1,0 +1,33 @@
+.footerItem {
+	width: 48%;
+	height: 250px;
+	position: relative;
+}
+
+.brandIcons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+}
+
+.brandIcons li {
+	display: inline-block;
+	margin-right: 5%;
+}
+
+.brandIcons li img {
+	width: 30px;
+}
+.socialising p {
+	font-size: 0.8em;
+	position: absolute;
+	bottom: 0;
+}
+
+.twoRoad {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	font-size: 1em;
+}

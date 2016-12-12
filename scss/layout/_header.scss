@@ -1,0 +1,9 @@
+.heading {
+	& > * {
+		display: inline-block;
+	}
+
+	& h3 {
+		margin-top: 65px;
+	}
+}

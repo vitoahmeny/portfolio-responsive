@@ -1,0 +1,116 @@
+@import '../abstracts/mixin';
+
+.menuContainer {
+	position: fixed;
+	top: 80px;
+	right: 7.8%;
+	z-index: 3;
+}
+
+.menuIcon {
+	width: 50px;
+	height: 24px;
+	position: relative;
+	cursor: pointer;
+}
+
+.menuIcon span {
+	position: absolute;
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: #939393;
+	left: 0;
+	@include transition(.25s, ease-in-out);
+}
+
+.menuIcon span:nth-child(1) {
+	top: 0px;
+}
+
+.menuIcon span:nth-child(2) {
+	top: 12px;
+}
+
+.menuIcon span:nth-child(3) {
+	width: 80%;
+	bottom: 0px;
+	margin-left: 20%;
+}
+
+.menuIcon:hover > span:nth-child(3) {
+	width: 100%;
+	margin-left: 0;
+}
+
+#menuInput {
+	display: none;
+}
+
+#menuInput:checked ~ label span:nth-child(1) {
+	top: 12px;
+	transform: rotate(150deg);
+}
+
+#menuInput:checked ~ label span:nth-child(2) {
+	opacity: 0;
+}
+
+#menuInput:checked ~ label span:nth-child(3) {
+	width: 100%;
+	margin-left: 0;
+	top: 12px;
+	transform: rotate(-150deg);
+}
+
+.menuItems {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(239, 239, 239);	
+	opacity: 0;
+	visibility: hidden;
+	@include transition(.25s, ease-in-out);
+	transition: opacity .25s;
+}
+
+.menuItems ul {
+	width: 70%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	top: 35%;
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+	margin: 0;
+	transition-timing-function: ease-in-out;
+	transition: color .25s, text-shadow .25s;
+}
+
+.menuItems ul:hover {
+	color: transparent;
+  	text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.menuItems ul li:hover {
+	color: #808080;
+	text-shadow: none;
+	transition: color .25s, text-shadow .25s;
+
+}
+
+.menuItems a {
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.4em;
+}
+
+#menuInput:checked ~ div.menuItems {
+	opacity: 1;
+	visibility: visible;
+	z-index: 2;
+}

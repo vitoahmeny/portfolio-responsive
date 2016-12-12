@@ -110,7 +110,7 @@ h1 {
 
 .menuItems ul {
 	width: 70%;
-	position: relative;
+	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
 	top: 35%;
